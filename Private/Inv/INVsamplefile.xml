@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<INVENTORY location="room">
+	<ITEM type="device">
+    <DESCRIPTION>
+    <![CDATA[
+generic device
+    ]]>
+    </DESCRIPTION>
+		<INDEX>1</INDEX>
+	</ITEM>
+</INVENTORY>  
