@@ -15,7 +15,7 @@ As you are going to run Invenktory in the PHP process context, using a limited w
 4. Configure the max devices per xml file as required (default: 10).   
 5. Configure the max history items and max recall history items as required (default: 50).  
   
-Http Console understands a limited set of commands with a far limited set of parameters:  
+Invenktory understands a limited set of commands with a far limited set of parameters:  
 cd, cd.., cp, edit, help, ls, mv, pwd, show  	   
 
 In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.   
