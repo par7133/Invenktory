@@ -40,7 +40,7 @@ define('APP_SCRIPT_PATH', "/var/www/YourWebApp/Private/scripts");
 define('APP_ERROR_PATH', "/var/www/YourWebApp/Private/error");
 define('APP_PROMPT', "INV:~ $1$");
 define('APP_SALT', "yoursalt");
-define('APP_INV_PATH', "/var/www/YourWebApp/Public/stage");
+define('APP_INV_PATH', "/var/www/YourWebApp/Private/Inv");
 
 define('CMDLINE_VALIDCMDS', "~|help|ls|pwd|cd|cd ..|cp|mv|show|edit|");
 
@@ -63,7 +63,7 @@ $CONFIG = [
       'ERROR_PATH' => "/var/www/YourWebApp/Private/error",
       'PROMPT' => "INV:~ $1$",
       'SALT' => "yoursalt",
-      'INV_PATH' => "/var/www/YourWebApp/Public/stage"
+      'INV_PATH' => "/var/www/YourWebApp/Private/Inv"
       ],
      
     'CMDLINE' => [
