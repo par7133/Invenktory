@@ -113,6 +113,60 @@ function left(?string $string, int $length): string
 }
 }
 
+if (!function_exists("ltrim1")) { 
+/**
+ * Left trim the given chars for a string 
+ * 
+ * @param string $string the string being trimmed
+ * @param string $chars the chars to trim off
+ * @return string the resulting string    
+ */
+function ltrim1(string $string, string $chars): string
+{
+  if (!isset($string) || $string === PHP_STR) {
+    return PHP_STR;
+  }
+  if (!isset($chars) || $chars === PHP_STR) {
+    return $string;
+  }
+  $len = strlen($chars); 
+  $retval = $string;
+  for ($y=1;$y<=$len;$y++) {
+    for ($z=0;$z<=$len-1;$z++) {
+      $retval = ltrim($retval,substr($chars,$z,1));
+    }   
+  }
+  return $retval;
+}
+}
+
+if (!function_exists("rtrim1")) {
+/**
+ * Right trim the given chars for a string 
+ * 
+ * @param string $string the string being trimmed
+ * @param string $chars the chars to trim off
+ * @return string the resulting string    
+ */
+function rtrim1(string $string, string $chars): string
+{
+  if (!isset($string) || $string === PHP_STR) {
+    return PHP_STR;
+  }
+  if (!isset($chars) || $chars === PHP_STR) {
+    return $string;
+  }
+  $len = strlen($chars); 
+  $retval = $string;
+  for ($y=1;$y<=$len;$y++) {
+    for ($z=0;$z<=$len-1;$z++) {
+      $retval = rtrim($retval,substr($chars,$z,1));
+    }   
+  }
+  return $retval;
+}
+}
+
 if (!function_exists("right")) {
 /**
  * Right cut the given string for the specified length 
