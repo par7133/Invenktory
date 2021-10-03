@@ -393,14 +393,14 @@ function updateHistory(&$update, $maxItems) {
    // Printing out the item descriptions
    foreach ($xml->children() as $child) {
      $text = $child->DESCRIPTION;
-     $text = ltrim($text,PHP_SPACE); 
-     $text = rtrim($text,PHP_SPACE); 
-     $text = ltrim($text,"\n");
-     $text = rtrim($text,"\n"); 
-     $output[] = $child->attributes()['type'] . " #" . $child->INDEX . ":\n" . $text . "\n";
+     
+     $text = rtrim1($text, PHP_SPACE . chr(13) . chr(10) . chr(32) . "\n");
+     $text = ltrim1($text, PHP_SPACE . chr(13) . chr(10) . chr(32) . "\n");
+     
+     //print_r("*" . right($text, 1) . "*");
+     //print_r(ord(right($text, 1)));
+     $output[] = $child->attributes()['type'] . " #" . $child->INDEX . ":\n" . $text . "\n\n";
    }
-   
-   $output[] = "\n";
    
    // Update History
    updateRecallHistory($command, RECALL_HISTORY_MAX_ITEMS);
@@ -1210,7 +1210,7 @@ function editparamValidation() {
          e.preventDefault();
          frmHC.submit();
 		   } else { 
-         $("#Salt").val(key);
+         //$("#Salt").val(key);
 		   }
 		 });
 
