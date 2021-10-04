@@ -735,6 +735,33 @@ function myExecEditCommand() {
    }
  }
  
+ function is_validxmlsynax(string $path) {
+   
+   $xml = rtrim1(ltrim1(file_get_contents($path), chr(10) . chr(13) . chr(32) . "\n"), chr(10) . chr(13) . chr(32) . "\n");
+   
+   if (left($xml, 5) !== "<?xml") {
+     return false;
+   }   
+
+   if (!mb_stripos("~" . $xml, "<INVENTORY location=")) {
+     return false;
+   }   
+
+   if (!mb_stripos("~" . $xml, "<ITEM type=")) {
+     return false;
+   }
+
+   if (!mb_stripos("~" . $xml, "</ITEM>")) {
+     return false;
+   }
+
+   if (!mb_stripos("~" . $xml, "</INVENTORY>")) {
+     return false;
+   }
+   
+   return true;
+ }  
+ 
  function showparamValidation() {
 	global $curPath;
 	global $opt;
@@ -779,8 +806,12 @@ function myExecEditCommand() {
 	  updateHistoryWithErr("invalid inventory file");	
 	  return false;
   }    
-   
-	return true;
+  //check file syntax
+  if (!is_validxmlsynax($curPath . DIRECTORY_SEPARATOR . $param1)) { 
+    updateHistoryWithErr("invalid file syntax");
+    return false;
+  }
+  return true;
  } 
 
 function editparamValidation() {
@@ -827,6 +858,11 @@ function editparamValidation() {
 	  updateHistoryWithErr("invalid inventory file");	
 	  return false;
   }    
+  //check file syntax
+  if (!is_validxmlsynax($curPath . DIRECTORY_SEPARATOR . $param1)) { 
+    updateHistoryWithErr("invalid file syntax");
+    return false;
+  }
    
 	return true;
  }
