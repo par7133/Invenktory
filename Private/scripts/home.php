@@ -1309,7 +1309,7 @@ function editparamValidation() {
 </head>
 <body>
 
-<div id="HCsplash" style="padding-top: 200px; text-align:center;" style="display:none;">
+<div id="HCsplash" style="padding-top: 200px; text-align:center; display:none;">
    <img src="res/INVsplash.gif" style="width:310px;">
 </div>
 
