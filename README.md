@@ -24,5 +24,5 @@ Hope you can enjoy it and let us know about any feedback: info@invenktory.com
 
 ### Screenshot:
 
- ![Http Console in action](/Public/static/res/screenshot1.png)
+ ![Http Console in action](/Public/static/res/screenshot1.jpg)
 
