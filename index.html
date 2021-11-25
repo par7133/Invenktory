@@ -47,23 +47,26 @@
   <link href="/Public/static/css/style.css?v=1631827555" type="text/css" rel="stylesheet">
 
   <script>	
+    
     function startApp() {
-	  $("#HCsplash").hide();
-	  $("#frmHC").show();  	
-	}	
+	    $("#HCsplash").hide();
+	    $("#frmHC").show();  	
+	  }	
 		
-	window.addEventListener("load", function() {
+	  window.addEventListener("load", function() {
 		
-    $("#frmHC").hide();  
-	  setTimeout("startApp()", 5000);
+      $("#frmHC").hide();  
+      $("#HCsplash").show("slow");
+	    setTimeout("startApp()", 5000);
 	  
-	}, true);
+	  }, true);
+    
   </script>
          
 </head>
 <body>
 
-<div id="HCsplash" style="padding-top: 200px; text-align:center;">
+<div id="HCsplash" style="padding-top: 200px; text-align:center; dispaly:none;">
    <img src="/Public/static/res/INVsplash.gif" style="width:310px;">
 </div>
 
