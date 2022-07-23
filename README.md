@@ -20,7 +20,7 @@ cd, cd.., cp, edit, help, ls, mv, pwd, show
 
 In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.   
    
-Hope you can enjoy it and let us know about any feedback: info@invenktory.com
+Hope you can enjoy it and let us know about any feedback: my25mb@aol.com
 
 ### Screenshot:
 
