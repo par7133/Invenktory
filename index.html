@@ -47,19 +47,52 @@
   <link href="/Public/static/css/style.css?v=1631827555" type="text/css" rel="stylesheet">
 
   <script>	
+
+  function startApp() {
     
-    function startApp() {
-	    $("#HCsplash").hide();
-	    $("#frmHC").show();  	
-	  }	
-		
-	  window.addEventListener("load", function() {
-		
-      $("#frmHC").hide();  
-      $("#HCsplash").show("slow");
-	    setTimeout("startApp()", 5000);
+    $("#HCsplash").css("display","none");
+    
+    //$("#HCsplash").hide("slow");
+    ///////////$(document.body).css("background","#ffffff");
+    $("#frmHC").show();
+  }			
+
+  function _startApp() {
+    setTimeout("startApp()", 1000);    
+  }
+
+  window.addEventListener("load", function() {
+	
+    $("#frmHC").hide();
+    
+    //Splash
+    $("#HCsplash").show();	
+    
+    //$(document.body).css("background","#000000");
+	  //$("#HCsplash").show("slow");	  
+    //setTimeout("startApp()", 4000);
+
+  }, true);
+
+  window.addEventListener("load", function() {
+      
+    // Fisnished the Intro load the app..
+    setTimeout("_startApp()", 6000);
+  
+  });	  
 	  
-	  }, true);
+   function startApp_old() {
+     $("#HCsplash").hide();
+     $("#frmHC").show();  	
+   }	
+		
+   window.addEventListener("lo-ad", function() {
+		
+      //$("#frmHC").hide();  
+      //$("#HCsplash").show("slow");
+      //setTimeout("startApp()", 5000);
+	  
+   }, true);
     
   </script>
          
@@ -70,7 +103,7 @@
    <img src="/Public/static/res/INVsplash.gif" style="width:310px;">
 </div>
 
-<form id="frmHC" method="POST" target="_self" enctype="multipart/form-data" style="display:inline;">
+<form id="frmHC" method="POST" target="_self" enctype="multipart/form-data" style="display:none;">
 
 <div class="header">
    <a href="/" style="color:white; text-decoration: none;"><img src="/Public/static/res/INVlogo.png" style="width:48px;">&nbsp;Invenktory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/par7133/Invenktory" style="color:#ffffff"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:my25mb@aol.com" style="color:#ffffff"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:white;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>
