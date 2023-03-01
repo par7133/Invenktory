@@ -1021,23 +1021,28 @@ function editparamValidation() {
  }
   
   
- $password = filter_input(INPUT_POST, "Password");
- $command = filter_input(INPUT_POST, "CommandLine");
+ $password = filter_input(INPUT_POST, "Password")??"";
+ $password = strip_tags($password);
+ $command = filter_input(INPUT_POST, "CommandLine")??"";
+ $command = strip_tags($command);
  
- $pwd = filter_input(INPUT_POST, "pwd"); 
- $hideSplash = filter_input(INPUT_POST, "hideSplash");
- $hideHCSplash = filter_input(INPUT_POST, "hideHCSplash");
+ $pwd = filter_input(INPUT_POST, "pwd")??""; 
+ $pwd = strip_tags($pwd);
+ $hideSplash = filter_input(INPUT_POST, "hideSplash")??"";
+ $hideSplash = strip_tags($hideSplash);
+ $hideHCSplash = filter_input(INPUT_POST, "hideHCSplash")??"";
+ $hideHCSplash = strip_tags($hideHCSplash);
 
  //EditBoard
- if (filter_input(INPUT_POST, "txtLocation")!==PHP_STR) {
+ if (strip_tags(filter_input(INPUT_POST, "txtLocation")??"")!==PHP_STR) {
    $editBoardParams[0] = [
-     'file' => filter_input(INPUT_POST, "editBoardDest"),
-     'location' => filter_input(INPUT_POST, "txtLocation")
+     'file' => strip_tags(filter_input(INPUT_POST, "editBoardDest")??""),
+     'location' => strip_tags(filter_input(INPUT_POST, "txtLocation")??"")
      ];
    for($i=1;$i<=10;$i++) {
      $editBoardParams[$i] = [ 
-         'type' => filter_input(INPUT_POST, "txtType" . $i),
-         'desc' => filter_input(INPUT_POST, "txtDesc" . $i)
+         'type' => strip_tags(filter_input(INPUT_POST, "txtType" . $i)??""),
+         'desc' => strip_tags(filter_input(INPUT_POST, "txtDesc" . $i)??"")
        ];   
    }
  }  
@@ -1316,7 +1321,7 @@ function editparamValidation() {
 <form id="frmHC" method="POST" action="/" target="_self" enctype="multipart/form-data" style="display:<?php echo(($hideHCSplash==="1"?"inline":"none"));?>;">
 
 <div class="header">
-   <a href="http://invenktory.5mode.com" target="_blank" style="color:white; text-decoration: none;"><img src="res/INVlogo.png" style="width:48px;">&nbsp;Invenktory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/par7133/Invenktory" style="color:#ffffff"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:my25mb@aol.com" style="color:#ffffff"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:white;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>
+   <a href="http://invenktory.com" target="_blank" style="color:white; text-decoration: none;"><img src="res/INVlogo.png" style="width:48px;">&nbsp;Invenktory</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/par7133/Invenktory" style="color:#ffffff"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:info@invenktory.com" style="color:#ffffff"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+39-331-4029415" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:white;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a>
 </div>
 	
 <div style="clear:both; float:left; padding:8px; width:15%; height:100%; text-align:center;">
@@ -1367,7 +1372,7 @@ function editparamValidation() {
 	   
      In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.<br><br> 
      
-	   Hope you can enjoy it and let us know about any feedback: <a href="mailto:my25mb@aol.com" style="color:#e6d236;">my25mb@aol.com</a>
+	   Hope you can enjoy it and let us know about any feedback: <a href="mailto:info@invenktory.com" style="color:#e6d236;">info@invenktory.com</a>
 	   
 	</div>	
 	<?php endif; ?>
