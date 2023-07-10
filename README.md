@@ -20,9 +20,10 @@ cd, cd.., cp, edit, help, ls, mv, pwd, show
 
 In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.   
    
-Hope you can enjoy it and let us know about any feedback: posta@elettronica.lol
 
 ### Screenshot:
 
  ![Http Console in action](/Public/static/res/screenshot1.jpg)
+
+Feedback: posta@elettronica.lol
 
