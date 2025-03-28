@@ -25,5 +25,5 @@ In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.
 
  ![Http Console in action](/Public/static/res/screenshot1.jpg)
 
-Feedback: posta@elettronica.lol
+Feedback: <a href="mailto:code@gaox.io">code@gaox.io</a>
 
