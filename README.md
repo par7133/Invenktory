@@ -18,8 +18,13 @@ As you are going to run Invenktory in the PHP process context, using a limited w
 Invenktory understands a limited set of commands with a far limited set of parameters:  
 cd, cd.., cp, edit, help, ls, mv, pwd, show  	   
 
+Go ahead by typeing in your password and your command.   
+
 In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.   
-   
+
+For any need of software additions, plugins and improvements please write to <a href="mailto:info@5mode.com">info@5mode.com</a>  
+
+To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form. 
 
 ### Screenshot:
 
