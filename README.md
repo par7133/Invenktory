@@ -24,11 +24,11 @@ In edit mode press [CTRL]+[X] to exit or [CTRL]+[S] to save.
 
 For any need of software additions, plugins and improvements please write to <a href="mailto:info@numode.eu">info@numode.eu</a>  
 
-To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form. 
+To help please donate by clicking <a href="https://numd.eu/l/dona1">https://numd.eu/l/dona1</a> and filling the form. 
 
 ### Screenshot:
 
  ![Http Console in action](/Public/static/res/screenshot1.jpg)
 
-Feedback: <a href="mailto:code@gaox.io">code@gaox.io</a>
+Feedback: <a href="mailto:code@numd.eu">code@numd.eu</a>
 
